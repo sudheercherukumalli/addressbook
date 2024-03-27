@@ -7,20 +7,26 @@ pipeline {
     }
 
     stages {
-        stage('Compile') {
+        stage('Build') {
             steps {
-               echo "compiling teh code"
+                script {
+                // Get some code from a GitHub repository
+                 echo "This is a Build Job"
+                }
             }
         }
-        stage('UnitTest') {
+        stage('Test') {
             steps {
-               echo "Test teh code"
+                // Get some code from a GitHub repository
+                echo "This is a Test Job"
+                }
             }
-        }
+        
         stage('Package') {
             steps {
-               echo "Package teh code"
+                // Get some code from a GitHub repository
+                echo "This is a Package Job"
+                }
             }
-        }
     }
 }
